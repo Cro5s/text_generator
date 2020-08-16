@@ -6,3 +6,6 @@
 # RSPEC
 1. In terminal type `bundle exec rspec` 
 2. Follow instructions given by the prompt and push `enter`
+
+# Text Files
+Use the `test_2.txt` file to test with different paragraph results
