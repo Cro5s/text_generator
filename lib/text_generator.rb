@@ -69,4 +69,29 @@ def sentence_builder(words)
   sentence
 end
 
+# Iterate over each word in the words array
+# Add each word to the new line string while its less than 80 characters
+# return the string when it reaches 80 characters
+
+def character_limit(words)
+  line_characters = ""
+  line_length = 0
+  words_array = words.split(" ")
+
+  words_array.each do |word|
+
+    if line_length < 80 && (line_length + word.length) <= 80
+      line_characters += word
+      line_length += word.length
+    else
+      line_length = 0
+      line_characters += "\n" + word
+      line_length += word.length
+
+    end
+  end
+
+  return line_characters
+end
+
 p text_generator(text)
